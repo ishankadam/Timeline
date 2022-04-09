@@ -1,0 +1,30 @@
+[
+  {
+    "_id": {
+      "$oid": "624fa51c4759d241bd15437e"
+    },
+    "name": "ishan",
+    "email": "try@111",
+    "contact": "121",
+    "age": "1",
+    "gender": "female",
+    "Qualification": "B.Tech",
+    "internship": "qqwdq",
+    "certificate": "qeq",
+    "resume": "HumanPool.docx"
+  },
+  {
+    "_id": {
+      "$oid": "624ffca13c109468fd47a357"
+    },
+    "name": "ishan",
+    "email": "ishaN@fynd",
+    "contact": "1234",
+    "age": "1",
+    "gender": "male",
+    "Qualification": "Diploma",
+    "internship": "na",
+    "certificate": "na",
+    "resume": "chocolicious menu-converted.pdf"
+  }
+]

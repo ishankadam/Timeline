@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fynd Academy</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+      <style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  border-style:solid;
+  border-color: #ffbb99;
+}
+
+tr:hover {background-color: coral;}
+
+      .button {
+  background-color: #ffbb99;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+    .bcontent {
+            margin-top: 10px;
+    }
+
+    .about {
+  padding: 0;
+  margin-top: 40px;
+}
+
+.about .container {
+  background-color: #f7f8f9;
+  padding: 60px 50px;
+}
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #ffbb99;
+  color: white;
+}
+
+</style>
+
+<link rel="stylesheet" href="/static/style.css">
+<body bgcolor= " #ffffff">
+<div class="topnav" id="myTopnav">
+  <img src ="/static/images/logoo.png" style="width:200px;height:70px;margin-left: 100px;">
+  <a href="/" style="margin-right:90px;"> Home </a>
+  
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<div class="w3-sidebar w3-bar-block w3-light-grey" style="width:20%" margin="0" >
+  <div class="w3-container w3-dark-grey">
+  </div>
+  <a href="/main" class="w3-bar-item w3-button w3-cream">Home</a>
+  <a href="/checkregister" class="w3-bar-item w3-button">Check Registrations</a>
+  <a href="#" class="w3-bar-item w3-button">Create Test</a>
+</div>
+
+<div style="margin-left:20%">
+
+<div class="w3-container">
+<h5>Backend with python registration list!</h5>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>contact</th>
+      <th>age</th>
+      <th>gender</th>
+      <th>Qualification</th>
+      <th>internship</th>
+      <th>certificate</th>
+      <th>resume</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for user in reg_list %}
+      <tr>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.contact }}</td>
+        <td>{{ user.age }}</td>
+        <td>{{ user.gender }}</td>
+        <td>{{ user.Qualification }}</td>
+        <td>{{ user.internship }}</td>
+        <td>{{ user.certificate }}</td>
+        <td>{{ user.resume }}</td>
+        <td><button>Delete</button></td>
+      </tr>
+    {% endfor %}
+  </tbody>
+  
+</table>
+<img id="output" width="500"/>
+<script>
+  var loadFile = function(event) {
+    var output = document.getElementById('output');
+    output.src = URL.createObjectURL(event.target.files[0]);
+    output.onload = function() {
+    URL.revokeObjectURL(output.src) 
+    }
+  };
+</script>
+</div>
+</div>
+
+</body>
+</html>
+
+
